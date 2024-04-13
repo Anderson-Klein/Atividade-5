@@ -4,29 +4,26 @@ public class ContaBancaria {
 
     private String numeroConta;
     private double saldo;
+    public void depositar(double valor) {saldo = saldo + valor;}
     public void sacar(double valor) {saldo = saldo - valor;}
     public double saldoAtual() {return saldo;}
-    public void depositar(double valor) {saldo = saldo + valor;}
-    
     
     public ContaBancaria(){
 
     }
 
-    public ContaBancaria(String numeroConta, double depositar) {
+    public void setDepositar(String numeroConta, double depositar) {
         this.numeroConta = numeroConta;
         this.saldo = saldo + depositar;
     }
 
-    public ContaBancaria(String numeroConta) {
+    public void setSacar(String numeroConta, double depositar, double sacar) {
         this.numeroConta = numeroConta;
-        this.sacar(double) = saldo - sacar(double);
-    }
-    
-    public ContaBancaria(String numeroConta, ) {
-        this.numeroConta = numeroConta;
-        this.saldoAtual() = saldo;
+        this.saldo = saldo - sacar;
     }
 
-
+    public void setSaldoAtual(String numeroConta, double saldoAtual ) {
+        this.numeroConta = numeroConta;
+        this.saldo = saldoAtual;
+    }
 }
