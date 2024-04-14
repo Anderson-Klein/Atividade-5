@@ -5,6 +5,10 @@ public class Produto {
     private double preco;
     private int quantidadeEmEstoque = 0;
 
+    
+    public Produto () {
+        
+    }
 
     public Produto(int codigo, String descricao, double preco, int quantidadeEmEstoque) {
         this.codigo = codigo;
