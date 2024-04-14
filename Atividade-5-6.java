@@ -7,7 +7,7 @@ public class ContaBancaria {
     public void depositar(double valor) {saldo = saldo + valor;}
     public void sacar(double valor) {saldo = saldo - valor;}
     public double saldoAtual() {return saldo;}
-    
+
     public ContaBancaria(){
 
     }
@@ -18,8 +18,12 @@ public class ContaBancaria {
     }
 
     public void setSacar(String numeroConta, double depositar, double sacar) {
+        if (saldo >= sacar) {
         this.numeroConta = numeroConta;
-        this.saldo = saldo - sacar;
+        this.saldo = saldo - sacar;}
+        else {
+            System.out.println("Erro ao sacar! saldo insuficiente");
+        }
     }
 
     public void setSaldoAtual(String numeroConta, double saldoAtual ) {
